@@ -46,70 +46,56 @@ const pillars = [
 
 export default function About() {
   return (
-    <section id="about" className="bg-background-soft py-20 sm:py-24">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+    <section id="about" className="neon-section py-20 sm:py-24">
+      <div className="neon-glow" aria-hidden="true" />
+      <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="About Us"
           title="Our Mission & Vision"
           description="Established in the heart of Harihar, Peace International School blends a rigorous CBSE curriculum with values-driven education — so every student grows with confidence and character."
+          light
         />
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-14 grid gap-6 md:grid-cols-3 perspective">
           {pillars.map((p, i) => (
             <Reveal key={p.title} delay={i * 130}>
-              <div
-                className={`group h-full rounded-3xl p-8 shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl ${
-                  i % 2 === 0
-                    ? "bg-gradient-to-br from-primary to-secondary text-white"
-                    : "bg-white"
-                }`}
-              >
-                <div
-                  className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl transition-transform duration-300 group-hover:scale-110 ${
-                    i % 2 === 0 ? "bg-accent text-white" : "bg-primary/10 text-primary"
-                  }`}
-                >
-                  {p.icon}
+              <div className="card-3d group h-full rounded-[1.75rem] border border-foreground/5 bg-white p-8 shadow-soft">
+                <div className="lift">
+                  <div className="inline-flex h-13 w-13 items-center justify-center rounded-2xl bg-primary/8 p-3 text-primary transition-colors group-hover:bg-accent group-hover:text-white">
+                    {p.icon}
+                  </div>
+                  <h3 className="mt-5 font-heading text-xl font-semibold text-foreground">
+                    {p.title}
+                  </h3>
+                  <p className="mt-3 leading-relaxed text-foreground/60">{p.text}</p>
                 </div>
-                <h3
-                  className={`mt-5 font-heading text-xl font-semibold ${
-                    i % 2 === 0 ? "text-white" : "text-foreground"
-                  }`}
-                >
-                  {p.title}
-                </h3>
-                <p
-                  className={`mt-3 leading-relaxed ${
-                    i % 2 === 0 ? "text-white/85" : "text-foreground/70"
-                  }`}
-                >
-                  {p.text}
-                </p>
               </div>
             </Reveal>
           ))}
         </div>
 
         <Reveal delay={150}>
-          <div className="mt-14 rounded-3xl bg-gradient-to-br from-primary via-secondary to-primary p-8 text-white shadow-xl sm:p-12">
+          <div className="neon-border mt-14 rounded-[2rem] bg-white/[0.06] p-8 sm:p-12">
             <div className="grid items-center gap-10 lg:grid-cols-[0.7fr_1.3fr]">
               <div>
                 <p className="font-heading text-lg font-semibold text-accent">
                   Principal&apos;s Message
                 </p>
                 <div className="mt-5 flex items-center gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/15 font-heading text-sm font-bold">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 font-heading text-sm font-bold text-white ring-1 ring-white/15">
                     PD
                   </div>
                   <div>
-                    <p className="font-heading text-sm font-semibold">Principal&apos;s Desk</p>
-                    <p className="text-xs text-white/70">
+                    <p className="font-heading text-sm font-semibold text-white">
+                      Principal&apos;s Desk
+                    </p>
+                    <p className="text-xs text-white/50">
                       Peace International School, Harihar
                     </p>
                   </div>
                 </div>
               </div>
-              <p className="text-lg leading-relaxed text-white/90">
+              <p className="text-lg leading-relaxed text-white/80">
                 &ldquo;Every child is a universe of possibility. At Peace
                 International School, our role is not just to teach — it is to
                 awaken curiosity, build character and prepare young minds for the

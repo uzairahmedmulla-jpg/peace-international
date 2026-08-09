@@ -1,18 +1,12 @@
 import Reveal from "./Reveal";
+import ApplyNowButton from "./apply/ApplyNowButton";
 
 export default function Cta() {
   return (
-    <section className="relative overflow-hidden bg-foreground py-20 sm:py-24">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-primary animate-gradient-x [background-size:200%_200%]" />
-      <div
-        className="pointer-events-none absolute inset-0"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at 15% 25%, rgba(255,138,0,0.35), transparent 40%), radial-gradient(circle at 85% 80%, rgba(255,138,0,0.3), transparent 40%)",
-        }}
-      />
+    <section className="neon-section py-20 sm:py-24">
+      <div className="neon-glow" aria-hidden="true" />
       <svg
-        className="pointer-events-none absolute -top-24 -left-24 h-96 w-96 text-white/10 animate-spin-slow"
+        className="pointer-events-none absolute -top-24 -left-24 h-96 w-96 text-white/10"
         viewBox="0 0 100 100"
         aria-hidden="true"
       >
@@ -40,10 +34,7 @@ export default function Cta() {
         </Reveal>
         <Reveal delay={360}>
           <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
-            <a
-              href="#apply"
-              className="inline-flex items-center gap-2 rounded-full bg-accent px-8 py-4 font-heading text-sm font-semibold text-white shadow-[0_10px_30px_rgba(255,138,0,0.5)] transition-all hover:-translate-y-0.5 hover:bg-accent-dark animate-pulse-glow"
-            >
+            <ApplyNowButton className="inline-flex items-center gap-2 rounded-full bg-accent px-8 py-4 font-heading text-sm font-semibold text-white shadow-[0_10px_30px_rgba(255,122,0,0.5)] transition-all hover:-translate-y-0.5 hover:bg-accent-dark animate-pulse-glow">
               Apply Now
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path
@@ -54,7 +45,7 @@ export default function Cta() {
                   strokeLinejoin="round"
                 />
               </svg>
-            </a>
+            </ApplyNowButton>
             <a
               href="#contact"
               className="inline-flex items-center gap-2 rounded-full border-2 border-white/40 px-8 py-4 font-heading text-sm font-semibold text-white transition-all hover:border-white hover:bg-white/10"

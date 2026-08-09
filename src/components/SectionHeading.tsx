@@ -21,13 +21,12 @@ export default function SectionHeading({
         align === "center" ? "mx-auto text-center" : "text-left"
       }`}
     >
-      <span className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-accent uppercase">
-        <span className="h-px w-6 bg-accent" />
+      <span className="inline-flex items-center gap-2.5 text-xs font-bold tracking-[0.2em] text-accent uppercase">
+        <span className="h-1.5 w-1.5 rounded-full bg-accent" />
         {eyebrow}
-        {align === "center" && <span className="h-px w-6 bg-accent" />}
       </span>
       <h2
-        className={`mt-3 font-heading text-3xl font-bold text-balance sm:text-4xl ${
+        className={`mt-4 font-heading text-3xl font-bold tracking-tight text-balance sm:text-4xl ${
           light ? "text-white" : "text-foreground"
         }`}
       >
@@ -36,7 +35,7 @@ export default function SectionHeading({
       {description && (
         <p
           className={`mt-4 text-lg leading-relaxed ${
-            light ? "text-white/80" : "text-foreground/70"
+            light ? "text-white/75" : "text-foreground/60"
           }`}
         >
           {description}

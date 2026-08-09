@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import SectionHeading from "./SectionHeading";
 import Reveal from "./Reveal";
 
@@ -78,32 +79,32 @@ const reasons = [
 
 export default function WhyChoose() {
   return (
-    <section id="why-us" className="relative overflow-hidden bg-background-soft py-20 sm:py-24">
-      <div
-        className="pointer-events-none absolute -top-32 -right-32 h-96 w-96 rounded-full bg-secondary/10 blur-3xl animate-blob"
-        aria-hidden="true"
-      />
+    <section id="why-us" className="neon-section py-20 sm:py-24">
+      <div className="neon-glow" aria-hidden="true" />
       <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="Why Choose Us"
           title="Why Choose Peace International School?"
           description="Parents choose us for our people, our campus and our promise — a nurturing environment where every child can thrive."
+          light
         />
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 perspective">
           {reasons.map((r, i) => (
             <Reveal key={r.title} delay={(i % 3) * 130}>
-              <div className="group h-full rounded-3xl bg-white p-7 shadow-lg shadow-primary/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-                <div
-                  className="inline-flex h-12 w-12 items-center justify-center rounded-2xl transition-transform duration-300 group-hover:scale-110"
-                  style={{ backgroundColor: `${r.color}14`, color: r.color }}
-                >
-                  {r.icon}
+              <div className="card-3d group h-full rounded-[1.75rem] border border-foreground/5 bg-white p-7 shadow-soft">
+                <div className="lift">
+                  <div
+                    className="tint-icon inline-flex h-12 w-12 items-center justify-center rounded-2xl"
+                    style={{ "--tint": r.color } as CSSProperties}
+                  >
+                    {r.icon}
+                  </div>
+                  <h3 className="mt-5 font-heading text-lg font-semibold text-foreground">
+                    {r.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-foreground/60">{r.text}</p>
                 </div>
-                <h3 className="mt-5 font-heading text-lg font-semibold text-foreground">
-                  {r.title}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-foreground/70">{r.text}</p>
               </div>
             </Reveal>
           ))}

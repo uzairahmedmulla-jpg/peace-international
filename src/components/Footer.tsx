@@ -44,7 +44,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-foreground text-white">
+    <footer className="relative overflow-hidden border-t border-[#8B5CF6]/25 bg-foreground text-white">
       <div className="pointer-events-none absolute -top-40 left-1/4 h-80 w-80 rounded-full bg-primary/40 blur-3xl" />
       <div className="pointer-events-none absolute -right-32 bottom-0 h-80 w-80 rounded-full bg-secondary/30 blur-3xl" />
 
@@ -128,16 +128,16 @@ export default function Footer() {
             <ul className="mt-4 space-y-3 text-sm text-white/70">
               <li>Peace International School, Harihar, Karnataka</li>
               <li>
-                <a href="tel:+919876543210" className="transition-colors hover:text-accent">
-                  +91 98765 43210
+                <a href="tel:+919880010068" className="transition-colors hover:text-accent">
+                  +91 98800 10068
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:info@peaceinternational.edu.in"
+                  href="mailto:peace.i.school@gmail.com"
                   className="transition-colors hover:text-accent"
                 >
-                  info@peaceinternational.edu.in
+                  peace.i.school@gmail.com
                 </a>
               </li>
               <li>Mon – Sat · 8:30 AM – 4:30 PM</li>

@@ -8,6 +8,7 @@ const posts = [
   {
     tag: "Admissions",
     date: "Aug 08, 2026",
+    color: "#2D1B7A",
     title: "Admissions Open for the 2026–27 Academic Year",
     excerpt:
       "Apply now to secure your child's seat across Nursery to Grade 10. Limited seats per grade — early applications recommended.",
@@ -17,6 +18,7 @@ const posts = [
   {
     tag: "Events",
     date: "Aug 02, 2026",
+    color: "#FF8A00",
     title: "Annual Sports Day & Cultural Fest Announced",
     excerpt:
       "Save the date! Our campus will come alive with sports, music and dance as students showcase their talents.",
@@ -26,6 +28,7 @@ const posts = [
   {
     tag: "Achievements",
     date: "Jul 28, 2026",
+    color: "#5130C9",
     title: "Outstanding CBSE Board Results 2026",
     excerpt:
       "Our students achieved a 98% pass rate with outstanding scores. Congratulations to all our achievers!",
@@ -35,6 +38,7 @@ const posts = [
   {
     tag: "Campus",
     date: "Jul 15, 2026",
+    color: "#0E7490",
     title: "New Smart Classrooms & Science Lab Inaugurated",
     excerpt:
       "We're delighted to unveil upgraded smart classrooms and a fully-equipped science laboratory for hands-on learning.",
@@ -46,20 +50,26 @@ const posts = [
 export default function News() {
   const [expanded, setExpanded] = useState<number | null>(null);
   return (
-    <section id="news" className="py-20 sm:py-24">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+    <section id="news" className="neon-section py-20 sm:py-24">
+      <div className="neon-glow" aria-hidden="true" />
+      <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="News & Events"
           title="What's Happening At Peace"
           description="Stay updated with the latest announcements, achievements and stories from our school community."
+          light
         />
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {posts.map((post, i) => (
             <Reveal key={post.title} delay={(i % 4) * 120}>
-              <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-foreground/5 bg-white shadow-lg shadow-primary/5 transition-all duration-300 hover:-translate-y-1">
-                <div className="flex h-36 items-center justify-center bg-gradient-to-br from-primary to-secondary">
-                  <svg className="h-12 w-12 text-white/25 transition-transform duration-500 group-hover:scale-110" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <article className="card-3d group flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-foreground/5 bg-white shadow-soft">
+                <div
+                  className="relative flex h-36 items-center justify-center overflow-hidden"
+                  style={{ backgroundColor: post.color }}
+                >
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.25),transparent_50%)]" />
+                  <svg className="relative h-12 w-12 text-white/25 transition-transform duration-500 group-hover:scale-110" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                     <path d="M4 5h13v15H4V5Zm13 5h3v10h-3" stroke="currentColor" strokeWidth="1.6" />
                   </svg>
                 </div>

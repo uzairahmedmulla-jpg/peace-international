@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
+import ApplyNowButton from "@/components/apply/ApplyNowButton";
 
 export const metadata: Metadata = {
   title: "Campus Tour | Peace International School, Harihar",
@@ -57,7 +58,7 @@ export default function CampusPage() {
             aria-hidden="true"
           />
           <div className="absolute inset-0 bg-black/30" aria-hidden="true" />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/70 via-secondary/50 to-primary/70" />
+          <div className="absolute inset-0 bg-[#10122b]/50" aria-hidden="true" />
           <div className="relative mx-auto max-w-7xl px-5 py-20 text-center lg:px-8">
             <Reveal>
               <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-5 py-2 text-sm font-semibold text-white backdrop-blur">
@@ -78,18 +79,16 @@ export default function CampusPage() {
               </p>
             </Reveal>
             <Reveal delay={360}>
-              <Link
-                href="/#apply"
-                className="mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 font-heading text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-accent-dark"
-              >
+              <ApplyNowButton className="mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 font-heading text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-accent-dark">
                 Apply for Admission
-              </Link>
+              </ApplyNowButton>
             </Reveal>
           </div>
         </section>
 
-        <section className="py-20 sm:py-24">
-          <div className="mx-auto max-w-7xl px-5 lg:px-8">
+        <section className="neon-section py-20 sm:py-24">
+          <div className="neon-glow" aria-hidden="true" />
+          <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
             <Reveal>
               <div className="max-w-2xl mx-auto text-center">
                 <span className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-accent uppercase">
@@ -97,10 +96,10 @@ export default function CampusPage() {
                   Campus Gallery
                   <span className="h-px w-6 bg-accent" />
                 </span>
-                <h2 className="mt-3 font-heading text-3xl font-bold text-foreground text-balance sm:text-4xl">
+                <h2 className="mt-3 font-heading text-3xl font-bold text-white text-balance sm:text-4xl">
                   Our Campus In Pictures
                 </h2>
-                <p className="mt-4 text-lg leading-relaxed text-foreground/70">
+                <p className="mt-4 text-lg leading-relaxed text-white/70">
                   A glimpse of the spaces where your child will learn, play and grow.
                 </p>
               </div>
@@ -109,7 +108,7 @@ export default function CampusPage() {
             <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {images.map((img, i) => (
                 <Reveal key={img.src} delay={(i % 3) * 130}>
-                  <figure className="group overflow-hidden rounded-3xl bg-white shadow-lg shadow-primary/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                  <figure className="card-3d group overflow-hidden rounded-[1.75rem] bg-white shadow-soft">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={img.src}
@@ -128,8 +127,9 @@ export default function CampusPage() {
           </div>
         </section>
 
-        <section className="bg-background-soft py-20 sm:py-24">
-          <div className="mx-auto max-w-7xl px-5 lg:px-8">
+        <section className="neon-section py-20 sm:py-24">
+          <div className="neon-glow" aria-hidden="true" />
+          <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
             <Reveal>
               <div className="max-w-2xl mx-auto text-center">
                 <span className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-accent uppercase">
@@ -137,10 +137,10 @@ export default function CampusPage() {
                   Campus Videos
                   <span className="h-px w-6 bg-accent" />
                 </span>
-                <h2 className="mt-3 font-heading text-3xl font-bold text-foreground text-balance sm:text-4xl">
+                <h2 className="mt-3 font-heading text-3xl font-bold text-white text-balance sm:text-4xl">
                   Experience The Campus In Motion
                 </h2>
-                <p className="mt-4 text-lg leading-relaxed text-foreground/70">
+                <p className="mt-4 text-lg leading-relaxed text-white/70">
                   Walk with us through the campus through our short video tours.
                 </p>              </div>
             </Reveal>
@@ -148,7 +148,7 @@ export default function CampusPage() {
             <div className="mt-14 grid gap-8 md:grid-cols-2">
               {videos.map((video, i) => (
                 <Reveal key={video.src} delay={i * 150}>
-                  <figure className="overflow-hidden rounded-3xl bg-white shadow-lg shadow-primary/5">
+                  <figure className="card-3d overflow-hidden rounded-[1.75rem] bg-white shadow-soft">
                     <video
                       controls
                       preload="metadata"
@@ -170,8 +170,9 @@ export default function CampusPage() {
           </div>
         </section>
 
-        <section className="py-20 sm:py-24">
-          <div className="mx-auto max-w-7xl px-5 lg:px-8">
+        <section className="neon-section py-20 sm:py-24">
+          <div className="neon-glow" aria-hidden="true" />
+          <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
             <Reveal>
               <div className="max-w-2xl mx-auto text-center">
                 <span className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-accent uppercase">
@@ -179,51 +180,55 @@ export default function CampusPage() {
                   What You&apos;ll Find
                   <span className="h-px w-6 bg-accent" />
                 </span>
-                <h2 className="mt-3 font-heading text-3xl font-bold text-foreground text-balance sm:text-4xl">
+                <h2 className="mt-3 font-heading text-3xl font-bold text-white text-balance sm:text-4xl">
                   Facilities Across Our Campus
                 </h2>
-                <p className="mt-4 text-lg leading-relaxed text-foreground/70">
+                <p className="mt-4 text-lg leading-relaxed text-white/70">
                   Everything your child needs for learning, safety and fun in one place.
                 </p>
               </div>
             </Reveal>
 
-            <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 perspective">
               {highlights.map((h, i) => (
                 <Reveal key={h.title} delay={(i % 3) * 130}>
-                  <div className="h-full rounded-3xl bg-gradient-to-br from-primary to-secondary p-7 text-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-accent font-heading text-lg font-bold">
-                      {String(i + 1).padStart(2, "0")}
+                  <div className="card-3d h-full rounded-[1.75rem] bg-white p-7 shadow-soft">
+                    <div className="lift">
+                      <div
+                        className="flex h-12 w-12 items-center justify-center rounded-2xl bg-accent font-heading text-lg font-bold text-white"
+                      >
+                        {String(i + 1).padStart(2, "0")}
+                      </div>
+                      <h3 className="mt-5 font-heading text-lg font-semibold text-foreground">{h.title}</h3>
+                      <p className="mt-3 text-sm leading-relaxed text-foreground/60">{h.text}</p>
                     </div>
-                    <h3 className="mt-5 font-heading text-lg font-semibold">{h.title}</h3>
-                    <p className="mt-3 text-sm leading-relaxed text-white/85">{h.text}</p>
                   </div>
                 </Reveal>
               ))}
             </div>
 
             <Reveal delay={150}>
-              <div className="mt-14 rounded-3xl bg-gradient-to-br from-primary via-secondary to-primary p-8 text-center shadow-xl sm:p-12">
-                <h3 className="font-heading text-2xl font-bold text-white sm:text-3xl">
-                  Ready To See It In Person?
-                </h3>
-                <p className="mx-auto mt-3 max-w-xl leading-relaxed text-white/85">
-                  Book a campus visit to walk through the classrooms, meet our
-                  teachers and experience Peace International first-hand.
-                </p>
-                <div className="mt-7 flex flex-wrap items-center justify-center gap-4">
-                  <Link
-                    href="/#contact"
-                    className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 font-heading text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-accent-dark"
-                  >
-                    Book a Campus Tour
-                  </Link>
-                  <Link
-                    href="/#apply"
-                    className="inline-flex items-center gap-2 rounded-full border-2 border-white/40 px-7 py-3.5 font-heading text-sm font-semibold text-white transition-all hover:border-white hover:bg-white/10"
-                  >
-                    Apply for Admission
-                  </Link>
+              <div className="relative mt-14 overflow-hidden rounded-[2rem] bg-foreground p-8 text-center shadow-raised sm:p-12">
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(255,122,0,0.28),transparent_42%),radial-gradient(circle_at_85%_80%,rgba(109,53,217,0.28),transparent_42%)]" />
+                <div className="relative">
+                  <h3 className="font-heading text-2xl font-bold text-white sm:text-3xl">
+                    Ready To See It In Person?
+                  </h3>
+                  <p className="mx-auto mt-3 max-w-xl leading-relaxed text-white/85">
+                    Book a campus visit to walk through the classrooms, meet our
+                    teachers and experience Peace International first-hand.
+                  </p>
+                  <div className="mt-7 flex flex-wrap items-center justify-center gap-4">
+                    <Link
+                      href="/#contact"
+                      className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 font-heading text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-accent-dark"
+                    >
+                      Book a Campus Tour
+                    </Link>
+                    <ApplyNowButton className="inline-flex items-center gap-2 rounded-full border-2 border-white/40 px-7 py-3.5 font-heading text-sm font-semibold text-white transition-all hover:border-white hover:bg-white/10">
+                      Apply for Admission
+                    </ApplyNowButton>
+                  </div>
                 </div>
               </div>
             </Reveal>

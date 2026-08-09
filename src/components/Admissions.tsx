@@ -30,29 +30,34 @@ const docs = [
   "Transfer certificate (where applicable)",
   "Passport-size photographs",
   "Aadhaar card of parent/child",
+  "Caste Income certificate",
 ];
 
 export default function Admissions() {
   return (
-    <section id="admissions" className="bg-background-soft py-20 sm:py-24">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+    <section id="admissions" className="neon-section py-20 sm:py-24">
+      <div className="neon-glow" aria-hidden="true" />
+      <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="Admissions"
           title="Admission Open For 2026–27"
           description="Joining Peace International School is simple and transparent. Here is everything you need to know to begin your child's journey with us."
+          light
         />
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4 perspective">
           {steps.map((s, i) => (
             <Reveal key={s.step} delay={(i % 4) * 120}>
-              <div className="relative h-full rounded-3xl bg-white p-7 pt-9 shadow-lg shadow-primary/5 transition-all duration-300 hover:-translate-y-1">
-                <span className="absolute -top-4 left-7 inline-flex h-9 items-center rounded-full bg-accent px-4 font-heading text-sm font-bold text-white">
+              <div className="card-3d relative h-full rounded-[1.75rem] bg-white p-7 pt-9 shadow-soft">
+                <span className="absolute -top-4 left-7 inline-flex h-9 items-center rounded-full bg-accent px-4 font-heading text-sm font-bold text-white shadow-sm">
                   Step {s.step}
                 </span>
-                <h3 className="mt-2 font-heading text-lg font-semibold text-foreground">
-                  {s.title}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-foreground/70">{s.text}</p>
+                <div className="lift">
+                  <h3 className="mt-2 font-heading text-lg font-semibold text-foreground">
+                    {s.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-foreground/60">{s.text}</p>
+                </div>
               </div>
             </Reveal>
           ))}
@@ -61,7 +66,7 @@ export default function Admissions() {
         <Reveal delay={120}>
           <div
             id="apply"
-            className="mt-14 grid overflow-hidden rounded-3xl bg-white shadow-xl lg:grid-cols-[1.2fr_0.8fr]"
+            className="mt-14 grid overflow-hidden rounded-[2rem] bg-white shadow-raised lg:grid-cols-[1.2fr_0.8fr]"
           >
           <div className="p-8 sm:p-12">
             <span className="text-sm font-semibold tracking-wide text-accent uppercase">
@@ -94,8 +99,8 @@ export default function Admissions() {
             </ul>
           </div>
 
-          <div className="relative flex flex-col justify-center bg-gradient-to-br from-primary to-secondary p-8 sm:p-12">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,138,0,0.35),transparent_45%)]" />
+          <div className="relative flex flex-col justify-center overflow-hidden bg-foreground p-8 sm:p-12">
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,122,0,0.3),transparent_45%)]" />
             <div className="relative">
               <p className="text-sm font-semibold tracking-wide text-accent uppercase">
                 Apply Now
@@ -109,7 +114,7 @@ export default function Admissions() {
               </p>
               <div className="mt-6 space-y-3">
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+919880010068"
                   className="flex items-center gap-3 rounded-2xl bg-white/10 px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/20"
                 >
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -120,17 +125,45 @@ export default function Admissions() {
                       strokeLinejoin="round"
                     />
                   </svg>
-                  +91 98765 43210
+                  +91 98800 10068
                 </a>
                 <a
-                  href="mailto:admissions@peaceinternational.edu.in"
+                  href="tel:+919538005254"
+                  className="flex items-center gap-3 rounded-2xl bg-white/10 px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/20"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path
+                      d="M6.6 3h3l1.8 4.5-2.2 1.5a13 13 0 0 0 5.8 5.8l1.5-2.2L21 14.4v3a2.4 2.4 0 0 1-2.6 2.4C10.2 19.2 4.8 13.8 4.2 5.6A2.4 2.4 0 0 1 6.6 3Z"
+                      stroke="currentColor"
+                      strokeWidth="1.6"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  +91 95380 05254
+                </a>
+                <a
+                  href="tel:+919535463522"
+                  className="flex items-center gap-3 rounded-2xl bg-white/10 px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/20"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path
+                      d="M6.6 3h3l1.8 4.5-2.2 1.5a13 13 0 0 0 5.8 5.8l1.5-2.2L21 14.4v3a2.4 2.4 0 0 1-2.6 2.4C10.2 19.2 4.8 13.8 4.2 5.6A2.4 2.4 0 0 1 6.6 3Z"
+                      stroke="currentColor"
+                      strokeWidth="1.6"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  +91 95354 63522
+                </a>
+                <a
+                  href="mailto:peace.i.school@gmail.com"
                   className="flex items-center gap-3 rounded-2xl bg-white/10 px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/20"
                 >
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                     <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" strokeWidth="1.6" />
                     <path d="m4 7 8 6 8-6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
                   </svg>
-                  admissions@peaceinternational.edu.in
+                  peace.i.school@gmail.com
                 </a>
               </div>
             </div>

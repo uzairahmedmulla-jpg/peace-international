@@ -19,8 +19,8 @@ const contactDetails = [
   },
   {
     label: "Call Us",
-    value: "+91 98765 43210",
-    href: "tel:+919876543210",
+    value: "+91 98800 10068",
+    href: "tel:+919880010068",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path
@@ -34,8 +34,8 @@ const contactDetails = [
   },
   {
     label: "Email Us",
-    value: "info@peaceinternational.edu.in",
-    href: "mailto:info@peaceinternational.edu.in",
+    value: "peace.i.school@gmail.com",
+    href: "mailto:peace.i.school@gmail.com",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" strokeWidth="1.6" />
@@ -57,12 +57,14 @@ const contactDetails = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="bg-background-soft py-20 sm:py-24">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+    <section id="contact" className="neon-section py-20 sm:py-24">
+      <div className="neon-glow" aria-hidden="true" />
+      <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="Contact Us"
           title="We'd Love To Hear From You"
           description="Have a question about admissions, academics or campus visits? Reach out — our team responds within one working day."
+          light
         />
 
         <div className="mt-14 grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
@@ -86,31 +88,34 @@ export default function Contact() {
                 <a
                   key={c.label}
                   href={c.href}
-                  className="flex items-center gap-4 rounded-2xl bg-white p-5 shadow-lg shadow-primary/5 transition-all hover:-translate-y-0.5"
+                  className="card-3d flex items-center gap-4 rounded-2xl bg-white p-5 shadow-soft"
                 >
                   {inner}
                 </a>
               ) : (
                 <div
                   key={c.label}
-                  className="flex items-center gap-4 rounded-2xl bg-white p-5 shadow-lg shadow-primary/5"
+                  className="card-3d flex items-center gap-4 rounded-2xl bg-white p-5 shadow-soft"
                 >
                   {inner}
                 </div>
               );
             })}
 
-            <div className="rounded-2xl bg-gradient-to-br from-primary to-secondary p-6 text-white shadow-lg">
-              <p className="font-heading text-lg font-semibold">Admission Open</p>
-              <p className="mt-1 text-sm text-white/80">
-                For 2026–27 across Nursery to Grade 10.
-              </p>
-              <a
-                href="#apply"
-                className="mt-4 inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 font-heading text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-accent-dark"
-              >
-                Apply Now
-              </a>
+            <div className="relative overflow-hidden rounded-2xl border border-accent/30 bg-white/[0.06] p-6 text-white shadow-[0_0_22px_rgba(255,122,0,0.18)]">
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_80%_10%,rgba(255,122,0,0.3),transparent_45%)]" />
+              <div className="relative">
+                <p className="font-heading text-lg font-semibold">Admission Open</p>
+                <p className="mt-1 text-sm text-white/80">
+                  For 2026–27 across Nursery to Grade 10.
+                </p>
+                <a
+                  href="#apply"
+                  className="mt-4 inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 font-heading text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-accent-dark"
+                >
+                  Apply Now
+                </a>
+              </div>
             </div>
             </div>
           </Reveal>

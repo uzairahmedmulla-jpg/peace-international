@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import ReviewsSection from "@/components/ReviewsSection";
+import ApplyNowButton from "@/components/apply/ApplyNowButton";
 
 export const metadata: Metadata = {
   title: "Parent Reviews | Peace International School, Harihar",
@@ -23,7 +23,7 @@ export default function ReviewsPage() {
             aria-hidden="true"
           />
           <div className="absolute inset-0 bg-black/30" aria-hidden="true" />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/70 via-secondary/50 to-primary/70" />
+          <div className="absolute inset-0 bg-[#10122b]/50" aria-hidden="true" />
           <div className="relative mx-auto max-w-7xl px-5 py-20 text-center lg:px-8">
             <Reveal>
               <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-5 py-2 text-sm font-semibold text-white backdrop-blur">
@@ -43,12 +43,9 @@ export default function ReviewsPage() {
               </p>
             </Reveal>
             <Reveal delay={360}>
-              <Link
-                href="/#apply"
-                className="mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 font-heading text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-accent-dark"
-              >
+              <ApplyNowButton className="mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 font-heading text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-accent-dark">
                 Apply for Admission
-              </Link>
+              </ApplyNowButton>
             </Reveal>
           </div>
         </section>

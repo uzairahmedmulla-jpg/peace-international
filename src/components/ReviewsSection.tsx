@@ -11,7 +11,7 @@ type Review = {
   quote: string;
   rating: number;
   initials: string;
-  gradient: string;
+  color: string;
 };
 
 const defaultReviews: Review[] = [
@@ -22,7 +22,7 @@ const defaultReviews: Review[] = [
     role: "Parent · Grade 5",
     rating: 5,
     initials: "RM",
-    gradient: "from-primary to-secondary",
+    color: "#2D1B7A",
   },
   {
     quote:
@@ -31,7 +31,7 @@ const defaultReviews: Review[] = [
     role: "Parent · Grade 2",
     rating: 5,
     initials: "SP",
-    gradient: "from-secondary to-primary",
+    color: "#5130C9",
   },
   {
     quote:
@@ -40,15 +40,15 @@ const defaultReviews: Review[] = [
     role: "Parent · Grade 7",
     rating: 5,
     initials: "KD",
-    gradient: "from-[#3B1FA8] to-primary",
+    color: "#0E7490",
   },
 ];
 
-const gradients = [
-  "from-primary to-secondary",
-  "from-accent to-[#FF5F1F]",
-  "from-secondary to-primary",
-  "from-[#3B1FA8] to-primary",
+const colors = [
+  "#2D1B7A",
+  "#FF8A00",
+  "#5130C9",
+  "#0E7490",
 ];
 
 function loadReviews(): Review[] {
@@ -94,7 +94,7 @@ export default function ReviewsSection() {
       quote,
       rating,
       initials: initialsOf(name),
-      gradient: gradients[reviews.length % gradients.length],
+      color: colors[reviews.length % colors.length],
     };
 
     const next = [review, ...reviews];
@@ -111,8 +111,9 @@ export default function ReviewsSection() {
   };
 
   return (
-    <section id="reviews" className="py-20 sm:py-24">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+    <section id="reviews" className="neon-section py-20 sm:py-24">
+      <div className="neon-glow" aria-hidden="true" />
+      <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
             <span className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-accent uppercase">
@@ -120,10 +121,10 @@ export default function ReviewsSection() {
               Testimonials
               <span className="h-px w-6 bg-accent" />
             </span>
-            <h2 className="mt-3 font-heading text-3xl font-bold text-foreground text-balance sm:text-4xl">
+            <h2 className="mt-3 font-heading text-3xl font-bold text-white text-balance sm:text-4xl">
               Parents &amp; Students Speak
             </h2>
-            <p className="mt-4 text-lg leading-relaxed text-foreground/70">
+            <p className="mt-4 text-lg leading-relaxed text-white/70">
               Hear from the families who make up our community — their words are
               our best endorsement.
             </p>
@@ -135,7 +136,7 @@ export default function ReviewsSection() {
             <button
               type="button"
               onClick={() => setShowForm((v) => !v)}
-              className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 font-heading text-sm font-semibold text-white shadow-[0_10px_30px_rgba(255,138,0,0.4)] transition-all hover:-translate-y-0.5 hover:bg-accent-dark"
+              className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 font-heading text-sm font-semibold text-white shadow-[0_10px_30px_rgba(255,122,0,0.4)] transition-all hover:-translate-y-0.5 hover:bg-accent-dark"
             >
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M8 3v10m-5-5h10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
@@ -149,7 +150,7 @@ export default function ReviewsSection() {
           <Reveal delay={100}>
             <form
               onSubmit={onSubmit}
-              className="mx-auto mt-8 max-w-2xl rounded-3xl bg-white p-8 shadow-xl"
+              className="mx-auto mt-8 max-w-2xl rounded-[1.75rem] bg-white p-8 shadow-raised"
             >
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>
@@ -224,7 +225,7 @@ export default function ReviewsSection() {
         <div className="mt-14 grid gap-6 md:grid-cols-2">
           {reviews.map((t, i) => (
             <Reveal key={`${t.name}-${i}`} delay={(i % 2) * 150}>
-              <figure className="relative h-full overflow-hidden rounded-3xl bg-white p-8 shadow-lg shadow-primary/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+              <figure className="card-3d relative h-full overflow-hidden rounded-[1.75rem] bg-white p-8 shadow-soft">
                 <svg
                   className="absolute -top-4 -right-2 h-24 w-24 text-primary/5"
                   viewBox="0 0 24 24"
@@ -254,7 +255,8 @@ export default function ReviewsSection() {
                 </blockquote>
                 <figcaption className="mt-6 flex items-center gap-3">
                   <div
-                    className={`flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br ${t.gradient} font-heading text-sm font-bold text-white`}
+                    className="flex h-12 w-12 items-center justify-center rounded-full font-heading text-sm font-bold text-white"
+                    style={{ backgroundColor: t.color }}
                   >
                     {t.initials}
                   </div>

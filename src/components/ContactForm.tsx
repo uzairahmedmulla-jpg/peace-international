@@ -13,7 +13,7 @@ export default function ContactForm() {
     const body = encodeURIComponent(
       `Name: ${name}\nMessage: ${message}`,
     );
-    window.location.href = `mailto:admissions@peaceinternational.edu.in?subject=${encodeURIComponent(
+    window.location.href = `mailto:peace.i.school@gmail.com?subject=${encodeURIComponent(
       "Enquiry from Peace International website",
     )}&body=${body}`;
     setSubmitted(true);
@@ -22,7 +22,7 @@ export default function ContactForm() {
   };
 
   return (
-    <form className="rounded-3xl bg-white p-8 shadow-xl" onSubmit={onSubmit}>
+    <form className="card-3d rounded-[1.75rem] bg-white p-8 shadow-soft" onSubmit={onSubmit}>
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className="mb-1.5 block text-sm font-semibold text-foreground">

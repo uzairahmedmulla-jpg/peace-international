@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Logo from "./Logo";
+import ApplyNowButton from "./apply/ApplyNowButton";
 
 const links = [
   { label: "Home", href: "/#home" },
@@ -57,12 +58,9 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Link
-            href="/#apply"
-            className="ml-3 rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white shadow-[0_8px_20px_rgba(255,138,0,0.35)] transition-all hover:-translate-y-0.5 hover:bg-accent-dark"
-          >
+          <ApplyNowButton className="ml-3 rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white shadow-[0_8px_20px_rgba(255,122,0,0.35)] transition-all hover:-translate-y-0.5 hover:bg-accent-dark">
             Apply Now
-          </Link>
+          </ApplyNowButton>
         </div>
 
         <button
@@ -105,13 +103,12 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/#apply"
+            <ApplyNowButton
               onClick={() => setOpen(false)}
-              className="mt-4 rounded-full bg-accent px-5 py-3 text-center text-sm font-semibold text-white shadow-[0_8px_20px_rgba(255,138,0,0.35)]"
+              className="mt-4 rounded-full bg-accent px-5 py-3 text-center text-sm font-semibold text-white shadow-[0_8px_20px_rgba(255,122,0,0.35)]"
             >
               Apply Now
-            </Link>
+            </ApplyNowButton>
           </div>
         </div>
       )}
