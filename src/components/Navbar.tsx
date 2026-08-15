@@ -10,6 +10,7 @@ const links = [
   { label: "About Us", href: "/#about" },
   { label: "Academics", href: "/#academics" },
   { label: "Admissions", href: "/#admissions" },
+  { label: "Fees", href: "/#fees" },
   { label: "Visit Campus Tour", href: "/campus" },
   { label: "Parent Reviews", href: "/reviews" },
   { label: "News", href: "/#news" },
@@ -49,15 +50,17 @@ export default function Navbar() {
         </Link>
 
         <div className="hidden items-center gap-1 lg:flex">
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="rounded-full px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-primary/5 hover:text-primary"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {links
+            .filter((link) => link.href !== "/#fees")
+            .map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="rounded-full px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-primary/5 hover:text-primary"
+              >
+                {link.label}
+              </Link>
+            ))}
           <ApplyNowButton className="ml-3 rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white shadow-[0_8px_20px_rgba(255,122,0,0.35)] transition-all hover:-translate-y-0.5 hover:bg-accent-dark">
             Apply Now
           </ApplyNowButton>

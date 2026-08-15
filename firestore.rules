@@ -1,0 +1,51 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isAdmin() {
+      return request.auth != null &&
+        request.auth.uid != null &&
+        get(/databases/$(database)/documents/admins/$(request.auth.uid)).data != null;
+    }
+
+    // First account to sign up becomes the admin (bootstrap). After that,
+    // only existing admins can manage the admins list.
+    match /admins/{uid} {
+      allow read: if isAdmin();
+      allow create: if request.auth != null &&
+        request.auth.uid == uid &&
+        get(/databases/$(database)/documents/settings/bootstrap).data.done == false;
+      allow update, delete: if isAdmin();
+    }
+
+    match /settings/bootstrap {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null &&
+        !exists(/databases/$(database)/documents/settings/bootstrap);
+      allow update: if isAdmin();
+    }
+
+    match /counters/{key} {
+      allow read, write: if isAdmin();
+    }
+
+    // Fee structures are published publicly on the website (read-only).
+    // Only administrators can create, edit or delete them.
+    match /feeStructures/{id} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /students/{id} {
+      allow read, write: if isAdmin();
+    }
+
+    match /payments/{id} {
+      allow read, write: if isAdmin();
+    }
+
+    match /invoices/{id} {
+      allow read, write: if isAdmin();
+    }
+  }
+}

@@ -13,7 +13,7 @@ const quickLinks = [
 const usefulLinks = [
   { label: "Parent Reviews", href: "/reviews" },
   { label: "Academic Calendar", href: "/#admissions" },
-  { label: "Fee Payment", href: "#admissions" },
+  { label: "Fee Payment", href: "#fees" },
   { label: "Transport Services", href: "#admissions" },
   { label: "Careers", href: "#contact" },
   { label: "Privacy Policy", href: "#home" },
@@ -27,12 +27,12 @@ const socials = [
   },
   {
     label: "Instagram",
-    href: "https://instagram.com",
+    href: "https://www.instagram.com/peaceschool_harihar",
     d: "M9 5h6a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4Zm3 4.2A2.8 2.8 0 1 1 9.2 12 2.8 2.8 0 0 1 12 9.2Zm3.6-.5h.01",
   },
   {
     label: "YouTube",
-    href: "https://youtube.com",
+    href: "https://www.youtube.com/@peaceinternationalschool103",
     d: "M21.5 12s0-3.3-.4-4.9c-.2-.9-.9-1.6-1.8-1.8C17.6 5 12 5 12 5s-5.6 0-7.3.3c-.9.2-1.6.9-1.8 1.8C2.5 8.7 2.5 12 2.5 12s0 3.3.4 4.9c.2.9.9 1.6 1.8 1.8 1.7.3 7.3.3 7.3.3s5.6 0 7.3-.3c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-4.9.4-4.9ZM10 9.5l5 2.5-5 2.5v-5Z",
   },
   {
@@ -61,7 +61,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/70">
-              Shaping Minds. Building Futures. For A Better Tomorrow — a CBSE
+              Shaping Minds. Building Futures. For A Better Tomorrow — a
               school in Harihar dedicated to academic excellence, values and
               character development.
             </p>

@@ -29,11 +29,11 @@ const posts = [
     tag: "Achievements",
     date: "Jul 28, 2026",
     color: "#5130C9",
-    title: "Outstanding CBSE Board Results 2026",
+    title: "Outstanding Academic Results 2026",
     excerpt:
       "Our students achieved a 98% pass rate with outstanding scores. Congratulations to all our achievers!",
     body:
-      "We are proud to announce a 98% pass rate in the CBSE board examinations 2026, with several students scoring above 95%. Congratulations to our students, their families and our dedicated faculty for this wonderful achievement.",
+      "We are proud to announce a 98% pass rate in the annual examinations 2026, with several students scoring above 95%. Congratulations to our students, their families and our dedicated faculty for this wonderful achievement.",
   },
   {
     tag: "Campus",

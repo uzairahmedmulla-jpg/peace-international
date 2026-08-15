@@ -76,7 +76,7 @@ const curriculum = [
   {
     band: "Primary School",
     grades: "Grade 1 – Grade 5",
-    tag: "CBSE Curriculum",
+    tag: "Academic Curriculum",
     text: "A strong foundation in English, Kannada, Hindi, Mathematics, EVS and Computer Science. Concept-based learning with regular assessments, activities and moral values.",
     color: "#2D1B7A",
     subjects: ["English", "Kannada & Hindi", "Mathematics", "EVS", "Computer Science"],
@@ -84,7 +84,7 @@ const curriculum = [
   {
     band: "Middle School",
     grades: "Grade 6 – Grade 8",
-    tag: "CBSE Curriculum",
+    tag: "Academic Curriculum",
     text: "Students move from basics to deeper understanding with Science, Social Science, Mathematics and three languages, plus labs, projects and STEM activities.",
     color: "#5130C9",
     subjects: ["Science", "Social Science", "Mathematics", "English", "Computer Science"],
@@ -92,8 +92,8 @@ const curriculum = [
   {
     band: "Secondary School",
     grades: "Grade 9 – Grade 10",
-    tag: "CBSE Board Preparation",
-    text: "Focused preparation for the CBSE board examinations with expert faculty, doubt-clearing sessions, model tests and career guidance for life after school.",
+    tag: "Board Examination Preparation",
+    text: "Focused preparation for the board examinations with expert faculty, doubt-clearing sessions, model tests and career guidance for life after school.",
     color: "#0E7490",
     subjects: ["Mathematics", "Science", "Social Science", "Languages", "Board Preparation"],
   },
@@ -182,7 +182,7 @@ export default function Academics() {
                   Nursery To Grade 10 — A Learning Path For Every Stage
                 </h3>
                 <p className="mt-4 leading-relaxed text-white/65">
-                  From playway early years to focused CBSE board preparation, our
+                  From playway early years to focused board examination preparation, our
                   curriculum grows with your child — building skills, knowledge and
                   confidence at every grade.
                 </p>
@@ -193,11 +193,11 @@ export default function Academics() {
                   </li>
                   <li className="flex items-center gap-2.5">
                     <span className="h-2 w-2 shrink-0 rounded-full bg-accent" />
-                    CBSE Curriculum for Grade 1 – Grade 5
+                    Curriculum for Grade 1 – Grade 5
                   </li>
                   <li className="flex items-center gap-2.5">
                     <span className="h-2 w-2 shrink-0 rounded-full bg-accent" />
-                    CBSE Curriculum for Grade 6 – Grade 10
+                    Curriculum for Grade 6 – Grade 10
                   </li>
                 </ul>
                 <a

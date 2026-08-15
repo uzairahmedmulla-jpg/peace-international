@@ -4,6 +4,7 @@ import About from "@/components/About";
 import Academics from "@/components/Academics";
 import WhyChoose from "@/components/WhyChoose";
 import Admissions from "@/components/Admissions";
+import Fees from "@/components/Fees";
 import CampusLife from "@/components/CampusLife";
 import Cta from "@/components/Cta";
 import News from "@/components/News";
@@ -21,6 +22,7 @@ export default function Home() {
         <WhyChoose />
         <CampusLife />
         <Admissions />
+        <Fees />
         <Cta />
         <News />
         <Contact />

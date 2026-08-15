@@ -14,35 +14,7 @@ type Review = {
   color: string;
 };
 
-const defaultReviews: Review[] = [
-  {
-    quote:
-      "Peace International has given my daughter confidence and a genuine love for learning. The teachers truly care, and the campus feels like a second home.",
-    name: "Ramesh M.",
-    role: "Parent · Grade 5",
-    rating: 5,
-    initials: "RM",
-    color: "#2D1B7A",
-  },
-  {
-    quote:
-      "As working parents, we trust the school completely. The transport, safety and daily updates keep us connected and worry-free.",
-    name: "Sneha P.",
-    role: "Parent · Grade 2",
-    rating: 5,
-    initials: "SP",
-    color: "#5130C9",
-  },
-  {
-    quote:
-      "Sports day, annual fest, inter-school competitions — my son has grown so much here. It is not just study, it is a complete education.",
-    name: "Kiran D.",
-    role: "Parent · Grade 7",
-    rating: 5,
-    initials: "KD",
-    color: "#0E7490",
-  },
-];
+const defaultReviews: Review[] = [];
 
 const colors = [
   "#2D1B7A",

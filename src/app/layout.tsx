@@ -19,7 +19,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Peace International School, Harihar | Shaping Minds. Building Futures.",
   description:
-    "Peace International School, Harihar — Shaping Minds. Building Futures. For A Better Tomorrow. CBSE curriculum, experienced faculty, and a vibrant campus life.",
+    "Peace International School, Harihar — Shaping Minds. Building Futures. For A Better Tomorrow. Structured curriculum, experienced faculty, and a vibrant campus life.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

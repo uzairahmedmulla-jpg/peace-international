@@ -24,6 +24,7 @@ const activities = [
       "Music, dance, drama and fine arts help every student find their expressive voice. Explore our arts gallery and videos.",
     longText:
       "Our arts programme nurtures imagination and confidence. From music and dance to drama and fine arts, every student discovers a creative outlet that stays with them for life.",
+    video: "/campus/art.mp4",
   },
   {
     slug: "clubs",
@@ -174,25 +175,39 @@ export default async function CampusLifeActivityPage({
             </Reveal>
 
             <div className="mt-14 grid gap-8 md:grid-cols-2">
-              {videos.map((video, i) => (
-                <Reveal key={video.src} delay={i * 150}>
-                  <div className="card-3d relative flex aspect-video items-center justify-center overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.06] shadow-soft">
-                    <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,122,0,0.18),transparent_55%)]" />
-                    <div className="relative flex flex-col items-center gap-3 p-8 text-center">
-                      <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/10 ring-1 ring-white/20">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                          <circle cx="12" cy="12" r="9" stroke="white" strokeWidth="1.6" />
-                          <path d="m10 8.5 5 3.5-5 3.5v-7Z" fill="white" />
-                        </svg>
-                      </span>
-                      <p className="font-heading text-lg font-semibold text-white">
-                        {video.title}
-                      </p>
-                      <p className="text-xs text-white/40">Video coming soon</p>
-                    </div>
-                  </div>
+              {activity.video ? (
+                <Reveal>
+                  <video
+                    src={activity.video}
+                    controls
+                    playsInline
+                    preload="metadata"
+                    className="card-3d aspect-video w-full rounded-[1.75rem] border border-white/10 bg-black shadow-soft"
+                  >
+                    Your browser does not support the video tag.
+                  </video>
                 </Reveal>
-              ))}
+              ) : (
+                videos.map((video, i) => (
+                  <Reveal key={video.src} delay={i * 150}>
+                    <div className="card-3d relative flex aspect-video items-center justify-center overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.06] shadow-soft">
+                      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,122,0,0.18),transparent_55%)]" />
+                      <div className="relative flex flex-col items-center gap-3 p-8 text-center">
+                        <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/10 ring-1 ring-white/20">
+                          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <circle cx="12" cy="12" r="9" stroke="white" strokeWidth="1.6" />
+                            <path d="m10 8.5 5 3.5-5 3.5v-7Z" fill="white" />
+                          </svg>
+                        </span>
+                        <p className="font-heading text-lg font-semibold text-white">
+                          {video.title}
+                        </p>
+                        <p className="text-xs text-white/40">Video coming soon</p>
+                      </div>
+                    </div>
+                  </Reveal>
+                ))
+              )}
             </div>
 
             <Reveal delay={150}>

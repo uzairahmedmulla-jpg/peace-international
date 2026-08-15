@@ -52,7 +52,7 @@ export default function About() {
         <SectionHeading
           eyebrow="About Us"
           title="Our Mission & Vision"
-          description="Established in the heart of Harihar, Peace International School blends a rigorous CBSE curriculum with values-driven education — so every student grows with confidence and character."
+          description="Established in the heart of Harihar, Peace International School blends a rigorous academic curriculum with values-driven education — so every student grows with confidence and character."
           light
         />
 

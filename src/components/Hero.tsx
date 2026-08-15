@@ -94,15 +94,9 @@ export default function Hero() {
                       <p className="text-sm font-medium text-white">Admission Open for 2026–27</p>
                     </div>
                   </div>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="rounded-2xl border border-white/25 bg-white/25 p-4 transition-transform hover:scale-[1.03]">
-                      <p className="font-heading text-2xl font-extrabold text-white">CBSE</p>
-                      <p className="mt-1 text-sm font-medium text-white">Curriculum</p>
-                    </div>
-                    <div className="rounded-2xl border border-white/25 bg-white/25 p-4 transition-transform hover:scale-[1.03]">
-                      <p className="font-heading text-2xl font-extrabold text-white">Nursery</p>
-                      <p className="mt-1 text-sm font-medium text-white">to Grade 10</p>
-                    </div>
+                  <div className="rounded-2xl border border-white/25 bg-white/25 p-4 transition-transform hover:scale-[1.03]">
+                    <p className="font-heading text-2xl font-extrabold text-white">Nursery</p>
+                    <p className="mt-1 text-sm font-medium text-white">to Grade 10</p>
                   </div>
                 </div>
               </div>
